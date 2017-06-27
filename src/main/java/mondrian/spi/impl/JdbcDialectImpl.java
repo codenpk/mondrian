@@ -464,6 +464,10 @@ public class JdbcDialectImpl implements Dialect {
     public boolean allowsMultipleDistinctSqlMeasures() {
         return allowsMultipleCountDistinct();
     }
+    
+    public boolean allowsCountDistinctWithOtherAggs() {
+        return allowsCountDistinct();
+    }
 
     public String generateInline(
         List<String> columnNames,

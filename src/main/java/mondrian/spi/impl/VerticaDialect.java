@@ -48,6 +48,10 @@ public class VerticaDialect extends JdbcDialectImpl {
     public DatabaseProduct getDatabaseProduct() {
         return DatabaseProduct.VERTICA;
     }
+    @Override
+    public boolean allowsCountDistinctWithOtherAggs() {
+        return false;
+    }
 
     @Override
     public boolean supportsResultSetConcurrency(int type, int concurrency) {
